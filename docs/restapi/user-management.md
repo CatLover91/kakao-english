@@ -544,6 +544,7 @@ Validate the Access Token obtained by [receiving the user token](/docs/restapi/u
 
 To [update a user token](/docs/restapi/user-management#토큰-갱신), it is necessary to call the current token within a certain period, such as whether the token has expired and how long it is valid.
     User tokens can be obtained through the Native SDK, REST API, or Javascript SDK. Regardless of which user tokens are obtained on which platform, you can use the functionality provided by the user token obtained after login.
+    
 **[Request]**
 ```bash
 GET /v1/user/access_token_info HTTP/1.1
