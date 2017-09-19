@@ -52,6 +52,7 @@ Host: kauth.kakao.com
 ```
 
 key | Explanation |	necessary
+-----|-----|----
 client_id |	The REST API key that was issued when the app was created. | O
 redirect_uri | URI to redirect code. _Settings > General > Web > URI_ that has _Settings > General > Web > Redirect Path_ added to each _domain_ set in the _site domain_. | O
 response_type |	code Fixed to string value. | O
@@ -80,6 +81,7 @@ Host: kauth.kakao.com
 Request the values ​​of the following parameters via POST.
 
 key | Explanation | necessary
+-----|-----|----
 grant\_type | Fixed with authorization_code | O
 client_id | The REST API key that was issued when the app was created. | O
 redirect_uri | The URI whose code was redirected. _Settings > General > Web > URI_ that has _Settings > General > Web > Redirect Path_ added to each domain set in the site domain. | O
@@ -125,6 +127,7 @@ Host: kauth.kakao.com
 Request the values ​​of the following parameters via POST.
 
 key | Explanation | necessary
+-----|-----|----
 grant\_type | Fixed with refresh\_token | O
 client\_id | The REST API key that was issued when the app was created. | O
 refresh\_token | It is used to update the Access Token with the refresh\_token received in response to the token issuance. | O
@@ -201,6 +204,7 @@ Content-Type: application/x-www-form-urlencoded;charset=utf-8
 Put the user token in the header and request it at POST. If you want to store your user information at the same time as connecting to your app, you can request the values ​​of the parameters below with your user token via POST. User information can be updated after sign-up by saving user information.
 
 key | Explanation | necessary
+-----|-----|----
 properties | The information of the user you are subscribed to. A key-value of type JSON. | X
 
 For example, if you want to get your age and gender at the time of your subscription,
@@ -215,6 +219,7 @@ curl -v -X POST https://kapi.kakao.com/v1/user/signup \
 If the app connection request is successful, include the value below as a JSON object in the response body.
 
 key | Explanation | type
+-----|-----|----
 id | App associated user ID | signed int64
 
 For example,
@@ -261,6 +266,7 @@ curl -v -X POST https://kapi.kakao.com/v1/user/unlink \
 If the app disconnect request is successful, include the value below as a JSON object in the response body.
 
 key | Explanation | type
+-----|-----|----
 id | App disconnected user ID | signed int64
 
 For example,
@@ -302,12 +308,14 @@ Content-type: application/x-www-form-urlencoded;charset=utf-8
 When using the Admin key and user ID (ID) as authentication information, it is requested together with the following parameters.
 
 key | Explanation | necessary
+-----|-----|----
 target_id_type | The type of user ID. Fixed value for user_id | O
 target_id | User ID | O
 
 GET / POST request with user token or admin key and user ID (ID) in header. You can optionally add values ​​for the following parameters along with user authentication information.
 
 key | Explanation | necessary
+-----|-----|----
 propertyKeys | Key list of user information. JSON Array type. | X
 secure_resource | Whether to return the image url as https. true / false | X
 
@@ -338,6 +346,7 @@ curl -v -X POST https://kapi.kakao.com/v1/user/me \
 If the user information request is successful, include the following value as a JSON object in the response body:
 
 key | Explanation | type
+-----|-----|----
 id | User's unique ID | signed int64
 kaccount_email | Emails from user cacao accounts | String
 kaccount_email_verified | Whether it is an 
@@ -435,6 +444,7 @@ Content-type: application/x-www-form-urlencoded;charset=utf-8
 POST requests the values ​​of the parameters below with the user token.
 
 key | Explanation | necessary
+-----|-----|----
 properties | The information of the user you are subscribed to. Key: value in JSON format. | O
 
 For example, if you want to update nickname and custom information age of basic additional information in user information, request as follows.
@@ -449,6 +459,7 @@ curl -v -X POST https://kapi.kakao.com/v1/user/update_profile \
 If the user information save request succeeds, the response body will contain the following values ​​as JSON objects:
 
 key | Explanation | type
+-----|-----|----
 id | User ID | signed int64
 
 For example,
@@ -483,6 +494,7 @@ Content-type: application/x-www-form-urlencoded;charset=utf-8
 You can request the following parameter values ​​with the Admin key.
 
 key | Explanation | necessary
+-----|-----|----
 limit | The maximum number of users to enter the page. (Minimum 1, maximum 100, default 100) Integer type. | X
 from_id | The user ID value from which to start paging. Generally, we use the results from Response. If there is no value, it reads from the user with the smallest ID. Long form | X
 order | The direction to search for paging. one of asc / desc (default asc) | X
@@ -504,6 +516,7 @@ curl -v -X POST https://kapi.kakao.com/v1/user/ids \
 User Information List If the request is successful, the response body will contain the following value as a JSON object:
 
 key | Explanation | type
+-----|-----|----
 elements | User ID list. | List
 total_count | The total number of users in your app. | Integer
 before_url | Previous page URL. Null if there is no previous page. | String
@@ -543,6 +556,7 @@ curl -v -X GET https://kapi.kakao.com/v1/user/access_token_info \
 If the request succeeds, the response body will contain the following value as a JSON object:
 
 key | Explanation | type
+-----|-----|----
 id | User ID	signed | int64
 expiresInMillis | The remaining validity period (Milli-seconds) of the given token. 0 or positive number | signed int64
 appId | Id of the app that issued the given token | signed int64
@@ -575,6 +589,7 @@ curl -v -X POST 'https://kapi.kakao.com/v2/api/talk/memo/default/send' \
 The request fails and the response body contains the following value as a JSON object:
 
 key | Explanation
+-----|-----
 required_scopes | The current consent required to use the API
 allowed_scopes | Consent items the user has agreed to
 ```bash
@@ -600,6 +615,7 @@ Host: kauth.kakao.com
 ```
 
 key | Explanation | necessary
+-----|-----|----
 scope | API requests, which are received in response to the required_scopes 
 ",". | O
 
