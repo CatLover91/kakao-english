@@ -9,18 +9,25 @@ We recommend that you refer to the descriptions of the advanced features that wi
 * [Configuring the development environment](/docs/restapi/getting-started#개발환경-구성)
 * [Create an app](/docs/restapi/getting-started#앱-생성)
 * [User management settings](/docs/restapi/getting-started#사용자-관리-설정)
+
 For a quick reference on the REST API, see below.
 * [Easy reference](/docs/restapi/quick-reference)
+
 The detailed features provided in this document are as follows.
 * [User Management](/docs/restapi/user-management)
+    
     Provides quick login through your Kakao account. [It also includes the ability to easily manage individual information of users.](/docs/restapi/user-management) [Among the functions provided by the Kakao platform service, it must be preceded in order to use functions that require login.](/docs/restapi/user-management)
 * [Cacao Story The](/docs/restapi/kakaostory-api)
+    
     APIs provided by Cacao Stories are available directly in the app.
 * [KakaoTalk](/docs/restapi/kakaotalk-api)
+    
     You can use the API provided by KakaoTalk directly in the app.
 * [카카오페이](/docs/restapi/kakaopay-api)
+    
     Describes the REST API for using the Cacao PayCafe Pay .
 * [Push Notifications](/docs/restapi/push-notification)
+    
     Describes the basic process and REST API for using push notifications. [You can send push notifications to iOS, Android applications via the REST API.](/docs/restapi/push-notification)
 The following documents are based on the following environment, and configurations may differ depending on developer's system environment.
 * Apple OS X system 10.9.2
